@@ -1,0 +1,535 @@
+ <!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--START META DATA PAGE DESCRIPTION-->
+<meta name="Author" content="Calmar Solutions Schweiz - Erin McGowan - www.calmarsolutions.ch">
+<meta name="Copyright" content="Calmar Solutions">
+<meta name="Credit" content="https://thenounproject.com/">
+<meta name="description" content="Margs Surfcamp Margaret River">
+<meta name="keywords" content="Surfing, Camping, Margaret River, Western Australia">
+<!--END META DATA PAGE DESCRIPTION-->
+<title>FUZZY 2</title>
+</head>
+<body>
+<a href="#introduction"><img class="arrow_image" src="./images/arrow.svg"></a>
+<a name="introduction"></a>
+<div id="change_class" class="flex_container section menu_section">
+	<div class="flex_item branding"><p></p></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#introduction"><p >Introduction</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#problem"><p>Problem</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#solutions"><p>Solutions</p></a></div>
+</div>
+
+<div class="section page header_section">
+<div class="gradient gradient_red_blue gradient_header_section"></div>
+	<div class="section_container header_section_container flex_container flex_header_container">
+		<div class="text header_text">
+		</div>
+	</div>
+</div>
+
+<div class="section page second_section">
+<a name="problem"></a>
+	<div class="section_container third_section_container flex_container flex_center">
+	<div class="text header_text">
+	<div class="row">
+	<div class="col-md-8">
+	<div class="text header_text_1">
+		<h2>Problem</h2>
+		</div>
+        <div align="justify" class="text_content" style="padding:30px;">
+        <span >  Persaingan pembuatan minimarket dilihat dari lokasi, tanah, dan prasarana yang mendukung. Harga penjualan tanah dilihat dari luas tanah dan jarak dari minimarket lain. Semakin jauh jarak minimarket satu dengan minimarket yang lain maka nilai jual akan semakin tinggi. Penelitian ini bertujuan mengalokasi harga penjualan tanah untuk dibangunkan minimarket. Pengolahan data menggunakan Inference Fuzzy Sugeno. Interface Fuzzy Sugeno outputnya berupa konstanta atau persamaan linier. Berdasarkan pengujian yang dilakukan dapat diketahui  bahwa teknik kendali fuzzy mampu menghasilkan respon seperti yang diharapkan yaitu mampu menilai jarak jauh dekat yang menentukan harga dalam penjualan tanah untuk pembangunan minimarket.</span>
+        </div>
+    </div>
+	<div class="col-md-4" >
+		<!-- isi -->
+        <div class="text header_text_1">
+        <h2>Aturan</h2>
+        </div>
+        <div style="padding:30px;">
+    <center><table border="1" class="table1" >
+        <thead>
+            <tr>
+                <td>Variabel</td>
+                <td>Himpunan Fuzzy</td>
+                <td>Domain</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Luas Tanah (m^2)</td>
+                <td><span name="luas_domain_keterangan">Kecil</span></td>
+                <td><input name="luas_domain_nilai" value="0-150" ></td>
+            </tr>
+            <tr>
+                <td><span name="luas_domain_keterangan">Sedang</span></td>
+                <td><input name="luas_domain_nilai" value="100-200" ></td>
+            </tr>
+            <tr>
+                <td><span name="luas_domain_keterangan">Besar</span></td>
+                <td><input name="luas_domain_nilai" value="150-300" ></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Jarak (m)</td>
+                <td><span name="jarak_domain_keterangan">Dekat</span></td>
+                <td><input name="jarak_domain_nilai" value="0-500" ></td>
+            </tr>
+            <tr>
+                <td><span name="jarak_domain_keterangan">Sedang</span></td>
+                <td><input name="jarak_domain_nilai" value="300-750" ></td>
+            </tr>
+            <tr>
+                <td><span name="jarak_domain_keterangan">Jauh</span></td>
+                <td><input name="jarak_domain_nilai" value="500-800"></td>
+            </tr>
+        
+        </tbody>
+    </table>
+	</center>
+    </div>
+    <!-- isi -->
+    <div>
+    <a target="_blank" href="https://jurnal.umk.ac.id/index.php/simet/article/view/127/135">*Aturan ini berdasarkan pada makalah yang berjudul "ANALISIS SISTEM INFERENCE FUZZY SUGENO DALAM MENENTUKAN HARGA PENJUALAN TANAH UNTUK PEMBANGUNAN MINIMARKET
+"</a>
+    </div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="section page third_section">
+<a name="solutions"></a>
+	<div class="section_container second_section_container flex_container flex_center">
+		<div class="text header_text text_grad_purple_yellow">
+			<h1>SOLUTIONS</h1></div>
+			<center>
+         	<h3> Mulai Perhitungan </h3>
+			 <form href="#hasils" method="post" style="padding-bottom: 30px">
+			  <div class="row" style="padding-top:30px;">
+			    <div class="col-md-6">
+			      <label for="nilaia" style="color:black;">Masukan Luas</label>
+			    </div>
+			    <div class="col-md-6">
+			      <input type="text" id="luas_input_nilai" name="luas_input_nilai" placeholder="masukan dalam m2">
+			    </div>
+			  </div>
+			  <div class="row" style="padding-top:30px;">
+			    <div class="col-md-6">
+			      <label for="nilaib">Masukan Jarak </label>
+			    </div>
+			    <div class="col-md-6">
+			      <input type="text" id="jarak_input_nilai" name="jarak_input_nilai" placeholder="masukan dalam m">
+			    </div>
+				</div>
+			  <div class="row" >
+			  <div class="col-md-10"style="padding-top:40px;padding-right:0px;">
+				<div class="flex_item menu_item_2 menu_item_outside"><a href="#hasil"><p>HASIL</p></a></div>
+				</div>
+				</div>
+			  </form>
+			  </center>
+	</div>
+</div>
+
+<div class="section page second_section">
+<a name="hasil"></a>
+	<div class="section_container third_section_container flex_container flex_center">
+    <div class="text header_text">
+	<div class="row">
+	    <div class="col-md-8">
+	        <div class="text header_text_1">
+             <h2>Keterangan</h2></div>
+                <div class="row" align="center" style="padding-top:30px;">
+                <div class="col-md-4">
+			    <h5>1. Inputan Luas :</h5>
+			    </div>
+			    <div class="col-md-4">
+                <h5 id="luas_input_keterangan">...</h5>
+                </div>
+             </div>
+            <div class="row" align="center" style="padding-top:30px;">
+                <div class="col-md-4">
+			    <h5>2. Inputan Jarak :</h5>
+			    </div>
+			    <div class="col-md-4">
+                <h5 id="jarak_input_keterangan">...</h5>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="text header_text_1" style="padding-right:500px;">
+             <h2>Hasil</h2></div>
+             <div class="row" align="left" style="padding-top:30px;">
+                <div class="col-50">
+			    <h5> Harga  : Rp. </h5>
+			    </div>
+			    <div class="col-50">
+                <h5 id="hasil">...</h5>
+                </div>
+             </div>
+            </div>
+        </div>
+
+    <div class="row">
+	    <div class="col-md-8">
+	        <div class="text header_text_1">
+             <h2>Rules</h2>
+        <div class="row" align="center" style="padding-top:30px;">
+        <div class="col-md-4" style="padding-top:30px;">
+			    <h5>Rule yang dihasilkan :</h5>
+			    </div>
+			    <div class="col-md-4">
+                <h5 id="harga_keterangan">...</h5>
+                </div>
+        </div>
+        </div>
+    <div class="col-md-4" style="padding-top:150px;">
+        </div>
+    </div>
+
+</div>
+<!--SCRIPT SECTION-->
+ <!-- javascript -->
+ <script src="./jquery.min.js"></script> 
+    <script>
+        //validasi inputan domain
+        function validasi_domain(domain) {
+            if (domain === "") {
+                return false;
+            }
+
+            if (domain.includes("-") === true) {
+                domain_split = domain.split("-");
+                if (isNaN(domain_split[0]) && isNaN(domain_split[1])) {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+
+            domain_split[0] = Number(domain_split[0]);
+            domain_split[1] = Number(domain_split[1]);
+
+            //output berupa range(dalam bentuk array) himpunan fuzzy
+            return domain_split;
+        }
+
+        //hasil inputan
+        function himpunan(tag) {
+            var keterangan = "";
+            var keterangan_array = [];
+;
+            var domain_nilai    = document.getElementsByName(tag+"_domain_nilai");//pengambilan range nilai domain sesuai variabel "tag"
+            var input_nilai     = Number($("#"+tag+"_input_nilai").val());//mengambil nilai yang diinputkan
+
+            if (input_nilai !== "") {
+                //identifikasi himpunan fuzzy dari nilai yang diinput berdasarkan range domain himpunan fuzzy
+                var batas_bawah     = domain_nilai[0].value.split("-");//batas bawah => batas_bawah[0]
+                var batas_atas      = domain_nilai[domain_nilai.length-1].value.split("-");//batas atas => batas_atas[1]
+                if (input_nilai<batas_bawah[0] || input_nilai>batas_atas[1]) {
+                    if (input_nilai < batas_bawah[0]) {
+                        keterangan_array.push([0]);
+                    }
+                    else {
+                        keterangan_array.push(domain_nilai.length-1);
+                    }
+                }
+                else {
+                    for (var index=0; index<domain_nilai.length; index++) {
+                        range = domain_nilai[index].value.split("-");
+                        if (range[0] <= input_nilai && input_nilai <= range[1]) {
+                            keterangan_array.push(index);
+                        }
+                    }
+                }
+
+                //jika nilai yang diinputkan hanya memiliki 1 anggota himpunan fuzzy, maka hasil inputan diset 1
+                if (keterangan_array.length === 1) {
+                    keterangan = document.getElementsByName(tag+"_domain_keterangan")[keterangan_array[0]].innerText+" => 1";
+                } else if (keterangan_array.length === 2) {//jika nilai yang diinputkan memiliki 2 anggota himpuann fuzzy
+                    var hasil = [];
+                    //mengambil range domain, sebagai acuan dalam menghitung hasil inputan
+                    var range_awal    = domain_nilai[keterangan_array[0]].value.split("-");
+                    var range_akhir   = domain_nilai[keterangan_array[1]].value.split("-");
+
+                    //menghitung hasil inputan
+                    hasil[0]    = (range_awal[1] - input_nilai)/(range_awal[1] - range_akhir[0]);//linear turun = (b-x)/(d-c)
+                    hasil[1]    = (input_nilai - range_akhir[0])/(range_awal[1] - range_akhir[0]);//linear naik = (x-a)/(b-a)
+
+                    //proses pembentukan output
+                    for (const index in keterangan_array) {
+                            if (keterangan !== "") {
+                                    keterangan += ", ";
+                            }
+
+                            keterangan += document.getElementsByName(tag+"_domain_keterangan")[keterangan_array[index]].innerText+" => "+hasil[index].toFixed(2);
+                    }
+                } else if (keterangan_array.length === 3) {//jika nilai yang diinputkan memiliki 2 anggota himpuann fuzzy
+                    var hasil = [];
+                    //mengambil range domain, sebagai acuan dalam menghitung hasil inputan
+                    var range_awal    = domain_nilai[keterangan_array[0]].value.split("-");
+                    var range_akhir   = domain_nilai[keterangan_array[1]].value.split("-");
+
+                    //menghitung hasil inputan
+                    hasil[0]    = (range_awal[1] - input_nilai)/(range_awal[1] - range_akhir[0]);//linear turun = (b-x)/(d-c)
+                    hasil[1]    = 1.00;
+                    hasil[2]    = (input_nilai - range_akhir[0])/(range_awal[1] - range_akhir[0]);//linear naik = (x-a)/(b-a)
+
+                    //proses pembentukan output
+                    for (const index in keterangan_array) {
+                            if (keterangan !== "") {
+                                    keterangan += ", ";
+                            }
+
+                            keterangan += document.getElementsByName(tag+"_domain_keterangan")[keterangan_array[index]].innerText+" => "+hasil[index].toFixed(2);
+                    }
+                } else {
+                    keterangan = "error";
+                }
+
+                //cetak output
+                $("#"+tag+"_input_keterangan").html(keterangan);
+            } else {
+                $("#"+tag+"_input_keterangan").html("Nilai yang diinputkan belum benar.");
+            }
+        }
+
+        function aturan() {
+            var luas    = $("#luas_input_keterangan").text().toLowerCase();
+            var jarak   = $("#jarak_input_keterangan").text().toLowerCase();
+
+            if (
+                luas.includes("...") === false && luas.includes("error") === false
+                && jarak.includes("...") === false && jarak.includes("error") === false
+            ) {
+                //pengambilan seluruh hasil input
+                if (luas.includes(",") === true) {
+                    var luas_array = luas.split(",");
+                } else {
+                    var luas_array = [luas];
+                }
+
+                if (jarak.includes(",") === true) {
+                    var jarak_array = jarak.split(",");
+                } else {
+                    var jarak_array = [jarak];
+                }
+                
+                //pembentukan aturan logika fuzzy
+                var kondisi = [];
+                var nilai_array = [];
+                var jumlah = 0;
+
+                for (const i in luas_array) {
+                    luas_nilai = luas_array[i].split(" => ");//kondisi nilai luas
+                    luas_keterangan = "<br>IF luas IS "+luas_nilai[0]+" ("+luas_nilai[1]+")";
+
+                    for (const j in jarak_array) {
+                        jarak_nilai = jarak_array[j].split(" => ");//kondisi nilai jarak
+                        jarak_keterangan = luas_keterangan+"<br>IF jarak IS "+jarak_nilai[0]+" ("+jarak_nilai[1]+")";
+
+                        nilai_array.push([luas_nilai, jarak_nilai]);
+                        kondisi[jumlah] = jarak_keterangan;
+
+                        jumlah++;
+                    }
+                }
+
+                //rules => luas | jarak | harga
+                var rules = [
+                    ["kecil", "dekat", 162000000],
+                    ["kecil", "sedang", 170000000],
+                    ["kecil", "jauh", 180000000],
+                    ["sedang", "dekat", 230000000],
+                    ["sedang", "sedang", 255000000],
+                    ["sedang", "jauh", 270000000],
+                    ["besar", "dekat", 300000000],
+                    ["besar", "sedang", 340000000],
+                    ["besar", "jauh", 360000000]
+                ];
+
+                //proses pembentukan output
+                var output_keterangan = [];
+                var sf      = [];
+                var harga   = [];
+                for (const i in nilai_array) {
+                    var output_nilai = [];
+                    for (const j in nilai_array[i]) {
+                        output_nilai.push(nilai_array[i][j][1]);
+                    }
+
+                    //pembentukan nilai then dengan cara mencari nilai terkecil
+                    output_nilai.sort((a, b) => a - b);
+                    sf.push(output_nilai[0]);
+
+                    //pembentukan variabel then dengan cara mencari rules
+                    var output_nilai_keterangan = "error";
+                    for (const j in rules) {
+                        if (
+                                nilai_array[i][0][0].trim() == rules[j][0]
+                            &&  nilai_array[i][1][0].trim() == rules[j][1]
+                        ) {
+                            output_nilai_keterangan = rules[j][2];
+                        }
+                    }
+
+                    harga.push([output_nilai_keterangan, output_nilai[0]]);
+                    output_keterangan += kondisi[i]+"<br>THEN harga "+output_nilai_keterangan+" ("+output_nilai[0]+")<br>";
+                }
+
+                sf.sort((a, b) => b - a);
+                output_keterangan += "<br>";
+
+                //cetak output
+                $("#harga_keterangan").html(output_keterangan);
+
+                return harga;
+            } else {
+                $("#harga_keterangan").html("error");
+                
+                return "";
+            }
+        }
+
+        function hasil(harga) {
+            var atas    = 0;
+            var bawah   = 0;
+            var hasil_atas = "";
+            var hasil_bawah = "";
+            for (const i in harga) {
+                atas    += Number(harga[i][0]*harga[i][1]);
+                bawah   += Number(harga[i][1]);
+                
+                //membuat hasil dalam bentuk text
+                if (i === "0") {
+                    hasil_atas += "( ";
+                    hasil_bawah += "( ";
+                }
+                hasil_atas += "("+harga[i][0]+"*"+harga[i][1]+")";
+                hasil_bawah += harga[i][1];
+                if (i < harga.length-1) {
+                    hasil_atas += " + ";
+                    hasil_bawah += " + ";
+                }
+                if (i === (harga.length-1)+"") {
+                    hasil_atas += " )";
+                    hasil_bawah += " )";
+                }
+            }
+
+            var hasil = atas/bawah;
+            $("#hasil").html(
+                hasil_atas+" / "+hasil_bawah+" = "+hasil.toFixed(2)
+            )
+        }
+
+        $(document).ready(function(){
+            $("#lihat").click(function() {
+               alert("Made with Ratih Nur Fatimah ❤.") ;
+            });
+
+            himpunan("luas");
+            himpunan("jarak");
+
+            $("#luas_input_nilai").keyup(function() {
+                himpunan("luas");
+                hasil(aturan());
+            });
+            $("#jarak_input_nilai").keyup(function() {
+                himpunan("jarak");
+                hasil(aturan());
+            });
+        });
+    </script>
+    <!-- //javascript -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+<style>
+* {
+  box-sizing: border-box;
+}
+h3{color:white;}
+input[type=text], select, textarea {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+ .text_content{
+                text-indent: 100px;
+
+            }
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color:black;
+}
+
+input[type=submit] {
+-webkit-transition: -webkit-transform .1s; /* Safari */
+transition: transform .1s;
+  background-color: #29B1F0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  float: right;
+}
+
+input[type=submit]:hover {
+-webkit-transition: -webkit-transform .1s; /* Safari */
+transition: transform .1s;
+  background-color: #29B1F0;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.table1 {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 50%;
+    border: 1px solid #3ca2ec;
+}
+ 
+.table1 tr th{
+    background: blacks;
+    color: blue;
+    font-weight: normal;
+}
+ 
+.table1, th, td {
+    padding: 8px 20px;
+    text-align: center;
+}
+ 
+.table1 tr:hover {
+    background-color: #f5f5f5;
+}
+ 
+
+</style>
+</html> 
